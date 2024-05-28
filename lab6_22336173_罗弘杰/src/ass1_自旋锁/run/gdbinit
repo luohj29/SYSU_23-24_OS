@@ -1,0 +1,8 @@
+target remote:1234
+file ../build/kernel.o
+set disassembly-flavor intel
+b setup_kernel
+b sync.cpp:20
+b sync.cpp:27
+b setup.cpp:33
+continue
